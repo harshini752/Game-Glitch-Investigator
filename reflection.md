@@ -8,7 +8,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
----
+	1.	The New Game button is not working properly after the player wins the game
+	2.	The Hard difficulty level is incorrectly set to a range of 1–50 instead of the expected 1–500
+	3.	The attempt counter begins at 1 instead of correctly starting from 0
+
+--- 
 
 ## 2. How did you use AI as a teammate?
 

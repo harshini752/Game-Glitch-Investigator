@@ -7,7 +7,7 @@ def get_range_for_difficulty(difficulty: str):
     if difficulty == "Normal":
         return 1, 100
     if difficulty == "Hard":
-        return 1, 50
+        return 1, 500
     return 1, 100
 
 
@@ -131,6 +131,7 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+# **BUG: status is never reset to "playing", so game stays in "won" state after clicking New Game**
 if new_game:
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(1, 100)
