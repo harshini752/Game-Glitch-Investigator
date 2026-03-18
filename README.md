@@ -26,12 +26,42 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The game picks a random secret number and the player guesses it.
+After each guess the game gives a hint to guide the player 
+higher or lower. The goal is to guess the correct number in 
+as few attempts as possible.
+
 - [ ] Detail which bugs you found.
+Bug 1: The New Game button was not working properly after the 
+player wins the game. It was not resetting the game state 
+correctly so the player could not start a fresh game after winning.
+
+Bug 2: The Hard difficulty level was incorrectly set to a range 
+of 1–50 instead of the expected range of 1–500. This meant Hard 
+mode was easier than intended.
+
+Bug 3: The Enter button was not working. The player had to 
+manually click Submit every time. Expected behavior is that 
+pressing Enter should also submit the guess.
+
 - [ ] Explain what fixes you applied.
+Bug 1: I used GitHub Copilot Agent Mode to fix the New Game 
+button logic so it correctly resets the game state after a win.
+
+Bug 2: I corrected the Hard difficulty range from 1–50 to 1–500 
+in the code. I verified both fixes by manually testing the game 
+in the browser and running pytest — all 6 tests passed.
+
+Bug 3 Fix: I used Claude in VS Code to fix the Enter button. 
+I verified by running the game in the browser and pressing 
+Enter after typing a guess — it now submits correctly.
+
+
 
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+
 
 ## 🚀 Stretch Features
 
